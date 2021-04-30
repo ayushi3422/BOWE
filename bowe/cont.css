@@ -1,0 +1,156 @@
+body{
+	font-family: 'sniglet' ,cursive;
+
+
+}
+
+*{
+	box-sizing: border-box;
+}
+
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+    background-color: #f2f2f2;
+}
+
+.container2{
+width: 550px;
+    background: transparent;
+    padding: 50px 0px 160px 0px;
+    }
+
+.sendmsg{
+display: block;
+    font-family: Ubuntu-Bold;
+    font-size: 30px;
+    color: #403866;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 49px;
+    }
+.close-btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10px;
+
+}
+
+.closeblock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 150px;
+    height: 62px;
+    background-color: #ffbf00;
+    pointer-events: none;
+    border-radius: 31px;
+    font-family: Ubuntu-Bold;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    transition: all 0.4s;
+    position: relative;
+    z-index: 1;
+}
+.forngrp{
+	    width: 100%;
+    background-color: #fff;
+    border-radius: 31px;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+input.inputn {
+    height: 62px;
+    padding: 0 35px 0 35px;
+}
+.inputn{
+    position: relative;
+    display: block;
+    width: 100%;
+    background: #fff;
+    border-radius: 31px;
+    font-family: Ubuntu-Bold;
+    font-size: 18px;
+    color: #8f8fa1;
+    line-height: 1.2;
+    border:none;
+       
+}
+
+textarea.inputn {
+    min-height: 169px;
+    padding: 19px 35px 0 35px;
+        outline: none;
+    border: none;
+    overflow: auto;
+    resize: vertical;
+
+}
+
+textarea {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+    appearance: auto;
+ -webkit-rtl-ordering: logical;
+    flex-direction: column;
+        cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    column-count: initial !important;
+    font: 400 13.3333px Arial;
+}
+
+button{
+	 border-radius: 31px;
+	     cursor: pointer;
+	      text-decoration: none;
+	       border: none;
+	 
+}
+
+a {
+    font-family: Ubuntu-Bold;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0px;
+    -webkit-transition: all 0.4s;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.focusinput{
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 31px;
+    background-color: #fff;
+    pointer-events: none;
+    transition: all 0.4s
+}

@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Contact Us</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffbf00">
+
+
+
+<link rel="stylesheet" type="text/css" href="cont.css">
+
+</head>
+<body>
+    <div class="container">
+	<div class="container2">
+
+<form id="myfrm"  method="post" >
+	<span class="sendmsg"> SEND US A MESSAGE</span>
+
+	<div class="close-btn">
+	   <a href="index.html">
+
+		<span class="closeblock">
+    <i class="fa fa-times m-r-6" aria-hidden="true">
+    	
+    
+    </i>
+		CLOSE</span>
+	   </a>
+    </div>
+
+    <div>
+    	
+    	<br>
+    </div>
+
+	<div class="formgrp " id="nameform" data-validate="Please enter your name">
+	
+		<input type="text" class="inputn" id="name" name="name"  placeholder="Full Name"/>
+		<span class="focusinput"></span> 
+	</div>
+
+	<br>
+
+<div class="formgrp" id="emailform" data-validate="Please enter your email: e@a.x">
+	
+		<input type="text" class="inputn" id="email" name="email"  placeholder="E-mail"/>
+		<span class="focusinput"></span> 
+
+</div>
+
+<br>
+
+<div class="formgrp" id="msgform" data-validate="Please enter your email: e@a.x">
+	
+		<textarea  id="message"  class="inputn" name="message"  placeholder="Your Message" style="margin-top: 0px; margin-bottom: 0px; height: 169px;"></textarea>
+		<span class="focusinput"></span> 
+
+</div>
+
+<br>
+<div class="close-btn">
+	   <button type="submit" id="emailbutton" >
+	    
+		<span id="emailbuttons" class="closeblock">
+
+
+
+    
+		SEND</span>
+	   </a>
+	</button>
+    </div>
+
+
+</form>
+</div>
+</div>
+</body>
+<script>
+	const button = document.getElementById("emailbuttons")
+		$("#emailbutton").on("click", function(){
+            $.ajax({
+                url:'mail.php',
+                data: {
+					'fullname':$('#name').val(),
+                    'email':$('#email').val(),
+                    'message':$('#message').val()
+                },
+                type:'post',
+                success: function(response){
+                    console.log('success');
+					button.innerHTML = "Message Sent Successfully"
+                    button.style.backgroundColor = "#73ff00";
+                },
+                error: function(){
+                }
+            })
+        });
+</script>
+
+</html>
